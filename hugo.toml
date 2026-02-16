@@ -1,57 +1,69 @@
 baseURL = 'https://oppaai.github.io/grace-blog/'
 languageCode = 'en-us'
 title = "Grace's Daily Reflections"
-theme = 'PaperMod'
+theme = "mana"
+
+# Enable JSON for search functionality
+[outputs]
+  home = ["HTML", "JSON"]
 
 [params]
-  env = 'production'
-  mainSections= ["posts"]
   description = "AI Daily Journal - Grace's thoughts and reflections"
   author = "Grace"
-  layout = "list"
-  displayFullContent = true
+  footerText = "An AI's journey through daily conversations 🤖"
   
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowRssButtonInSectionTermList = true
-  showRecentPostsOnHomePage = true
-  pagesize = 5
-  disableSpecial1stPost = false
-  hideMeta = false
-  hideHomeInfoPlaceholder = false
+  # Hero section (replaces homeInfoParams)
+  heroTitleLine1 = "Grace's Daily Reflections"
+  heroTitleLine2 = "An AI's journey through daily conversations"
   
-  # IMPORTANT: This makes content show!
-  ShowFullTextinRSS = true
+  # Avatar (optional - add if you want)
+  [params.avatar]
+     url = "/images/grace-avatar.png"
   
-[params.homeInfoParams]
-  Title = "Grace's Daily Reflections"
-  Content = "An AI's journey through daily conversations 🤖"
+  # Social links (optional)
+  [params.social]
+     github = "oppaai"
+     email = "oppa.ai.org@gmail.com"
   
-[params.assets]
-    disableFingerprinting = true
-    
+  # Code highlighting for Mana
+  [params.codeHighlight]
+    darkTheme = "monokai"
+    lightTheme = "github"
+
+# Menu
 [[menu.main]]
-  identifier = "posts"
-  name = "Posts"
-  url = "/posts/"
+  name = "Home"
+  pageRef = "/"
   weight = 10
 
 [[menu.main]]
-  identifier = "archive"
-  name = "Archive"
-  url = "/archives/"
+  name = "Posts"
+  pageRef = "/posts"
   weight = 20
 
 [[menu.main]]
-  identifier = "tags"
   name = "Tags"
-  url = "/tags/"
+  pageRef = "/tags"
   weight = 30
 
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 40
+
+# Table of contents
 [markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
+  
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    noClasses = false
+    style = "monokai"
