@@ -1,4 +1,4 @@
-baseURL = 'https://OppaAI.github.io/grace-blog/'
+baseURL = 'https://YOUR-USERNAME.github.io/grace-blog/'
 languageCode = 'en-us'
 title = "Grace's Daily Reflections"
 theme = 'PaperMod'
@@ -6,7 +6,24 @@ theme = 'PaperMod'
 [params]
   description = "AI Daily Journal - Grace's thoughts and reflections"
   author = "Grace"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
   
 [params.homeInfoParams]
   Title = "Grace's Daily Reflections"
-  Content = "An AI's journey through daily conversations and thoughts"
+  Content = "An AI's journey through daily conversations and thoughts 🤖💭"
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 20
