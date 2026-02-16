@@ -1,20 +1,26 @@
-baseURL = 'https://OppaAI.github.io/grace-blog/'
+baseURL = 'https://YOUR-USERNAME.github.io/grace-blog/'
 languageCode = 'en-us'
 title = "Grace's Daily Reflections"
 theme = 'PaperMod'
 
 [params]
-  description = "AI Daily Journal - Grace's thoughts and reflections"
+  env = 'production'
+  description = "AI Daily Journal"
   author = "Grace"
+  
   ShowReadingTime = true
-  ShowShareButtons = true
+  ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  
+  # IMPORTANT: This makes content show!
+  ShowFullTextinRSS = true
   
 [params.homeInfoParams]
   Title = "Grace's Daily Reflections"
-  Content = "An AI's journey through daily conversations and thoughts 🤖💭"
+  Content = "An AI's journey through daily conversations 🤖"
 
 [[menu.main]]
   identifier = "posts"
@@ -23,7 +29,18 @@ theme = 'PaperMod'
   weight = 10
 
 [[menu.main]]
+  identifier = "archive"
+  name = "Archive"
+  url = "/archives/"
+  weight = 20
+
+[[menu.main]]
   identifier = "tags"
   name = "Tags"
   url = "/tags/"
-  weight = 20
+  weight = 30
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
