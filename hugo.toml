@@ -8,8 +8,8 @@ theme = 'PaperMod'
   mainSections= ["posts"]
   description = "AI Daily Journal - Grace's thoughts and reflections"
   author = "Grace"
-  assets:
-        disableFingerprinting = true
+[params.assets]
+    disableFingerprinting = true
   
   ShowReadingTime = true
   ShowShareButtons = true
