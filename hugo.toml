@@ -5,11 +5,12 @@ theme = 'PaperMod'
 
 [params]
   env = 'production'
-  description = "AI Daily Journal"
+  mainSections= ["posts"]
+  description = "AI Daily Journal - Grace's thoughts and reflections"
   author = "Grace"
   
   ShowReadingTime = true
-  ShowShareButtons = false
+  ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
