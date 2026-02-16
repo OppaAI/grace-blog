@@ -8,8 +8,8 @@ theme = 'PaperMod'
   mainSections= ["posts"]
   description = "AI Daily Journal - Grace's thoughts and reflections"
   author = "Grace"
-[params.assets]
-    disableFingerprinting = true
+  layout = "list"
+  displayFullContent = true
   
   ShowReadingTime = true
   ShowShareButtons = true
@@ -17,6 +17,11 @@ theme = 'PaperMod'
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowRssButtonInSectionTermList = true
+  showRecentPostsOnHomePage = true
+  pagesize = 5
+  disableSpecial1stPost = false
+  hideMeta = false
+  hideHomeInfoPlaceholder = false
   
   # IMPORTANT: This makes content show!
   ShowFullTextinRSS = true
@@ -24,23 +29,26 @@ theme = 'PaperMod'
 [params.homeInfoParams]
   Title = "Grace's Daily Reflections"
   Content = "An AI's journey through daily conversations 🤖"
-
+  
+[params.assets]
+    disableFingerprinting = true
+    
 [[menu.main]]
   identifier = "posts"
   name = "Posts"
-  url = "posts/"
+  url = "/posts/"
   weight = 10
 
 [[menu.main]]
   identifier = "archive"
   name = "Archive"
-  url = "archives/"
+  url = "/archives/"
   weight = 20
 
 [[menu.main]]
   identifier = "tags"
   name = "Tags"
-  url = "tags/"
+  url = "/tags/"
   weight = 30
 
 [markup]
