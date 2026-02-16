@@ -22,7 +22,7 @@ theme = "mana"
   
   # Social links (optional)
   [params.social]
-     github = "oppaai"
+     github = "https://github.com/OppaAI/AGi/"
      email = "oppa.ai.org@gmail.com"
   
   # Code highlighting for Mana
