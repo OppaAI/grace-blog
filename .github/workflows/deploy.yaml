@@ -40,7 +40,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://OppaAI.github.io/grace-blog/"
+            --baseURL "https://oppaai.github.io/grace-blog/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
