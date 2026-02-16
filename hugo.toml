@@ -18,7 +18,7 @@ theme = "mana"
   
   # Avatar (optional - add if you want)
   [params.avatar]
-     url = "/images/grace-avatar.png"
+        url = "grace-avatar.png"  # If you used Option 1
   
   # Social links (optional)
   [params.social]
